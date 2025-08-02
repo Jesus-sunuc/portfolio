@@ -89,17 +89,17 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technical{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Skills
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               A comprehensive overview of my technical expertise and
               professional capabilities
             </p>
@@ -108,10 +108,13 @@ const Skills = () => {
           {/* Skills Grid */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {skillCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-gray-50 rounded-2xl p-8">
+              <div
+                key={categoryIndex}
+                className="bg-gray-700 border border-gray-600 rounded-2xl p-8"
+              >
                 <div className="flex items-center mb-6">
                   <span className="text-3xl mr-4">{category.icon}</span>
-                  <h3 className="text-2xl font-bold text-gray-800">
+                  <h3 className="text-2xl font-bold text-white">
                     {category.title}
                   </h3>
                 </div>
@@ -120,14 +123,14 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-800">
+                        <span className="font-semibold text-white">
                           {skill.name}
                         </span>
-                        <span className="text-sm text-gray-600">
+                        <span className="text-sm text-gray-300">
                           {skill.level}%
                         </span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-3">
+                      <div className="w-full bg-gray-600 rounded-full h-3">
                         <div
                           className={`h-3 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
                           style={{ width: `${skill.level}%` }}
@@ -142,23 +145,23 @@ const Skills = () => {
 
           {/* Achievements Section */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+            <h3 className="text-3xl font-bold text-white mb-8 text-center">
               Experience & Achievements
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow"
+                  className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 p-6 rounded-xl text-center hover:shadow-lg transition-shadow"
                 >
                   <div className="text-4xl mb-4">{achievement.icon}</div>
-                  <h4 className="font-bold text-gray-800 mb-2">
+                  <h4 className="font-bold text-white mb-2">
                     {achievement.title}
                   </h4>
-                  <p className="text-gray-600 text-sm mb-2">
+                  <p className="text-gray-300 text-sm mb-2">
                     {achievement.description}
                   </p>
-                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="inline-block bg-blue-600 text-blue-100 px-3 py-1 rounded-full text-xs font-medium">
                     {achievement.period}
                   </span>
                 </div>
@@ -167,21 +170,21 @@ const Skills = () => {
           </div>
 
           {/* Certifications & Learning */}
-          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          <div className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8">
+            <h3 className="text-3xl font-bold text-white mb-8 text-center">
               Certifications & Continuous Learning
             </h3>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                <h4 className="text-xl font-semibold text-white mb-4">
                   Technical Certifications
                 </h4>
                 <div className="space-y-3">
                   {certifications.map((cert, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <svg
-                        className="w-5 h-5 text-green-500"
+                        className="w-5 h-5 text-green-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -191,49 +194,49 @@ const Skills = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-gray-700">{cert}</span>
+                      <span className="text-gray-300">{cert}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                <h4 className="text-xl font-semibold text-white mb-4">
                   Currently Learning
                 </h4>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Advanced Kubernetes</span>
-                    <div className="w-24 bg-gray-200 rounded-full h-2">
+                    <span className="text-gray-300">Advanced Kubernetes</span>
+                    <div className="w-24 bg-gray-600 rounded-full h-2">
                       <div
-                        className="bg-blue-600 h-2 rounded-full"
+                        className="bg-blue-500 h-2 rounded-full"
                         style={{ width: "60%" }}
                       ></div>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Machine Learning</span>
-                    <div className="w-24 bg-gray-200 rounded-full h-2">
+                    <span className="text-gray-300">Machine Learning</span>
+                    <div className="w-24 bg-gray-600 rounded-full h-2">
                       <div
-                        className="bg-green-600 h-2 rounded-full"
+                        className="bg-green-500 h-2 rounded-full"
                         style={{ width: "40%" }}
                       ></div>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">German Language</span>
-                    <div className="w-24 bg-gray-200 rounded-full h-2">
+                    <span className="text-gray-300">German Language</span>
+                    <div className="w-24 bg-gray-600 rounded-full h-2">
                       <div
-                        className="bg-yellow-600 h-2 rounded-full"
+                        className="bg-yellow-500 h-2 rounded-full"
                         style={{ width: "45%" }}
                       ></div>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Russian Language</span>
-                    <div className="w-24 bg-gray-200 rounded-full h-2">
+                    <span className="text-gray-300">Russian Language</span>
+                    <div className="w-24 bg-gray-600 rounded-full h-2">
                       <div
-                        className="bg-red-600 h-2 rounded-full"
+                        className="bg-red-500 h-2 rounded-full"
                         style={{ width: "30%" }}
                       ></div>
                     </div>

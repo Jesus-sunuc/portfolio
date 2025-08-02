@@ -65,17 +65,17 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Get In{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Touch
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               I'm always excited to discuss new opportunities, collaborate on
               projects, or just have a conversation about technology and
               innovation.
@@ -85,11 +85,11 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <div className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Let's Connect
                 </h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+                <p className="text-gray-300 mb-8 leading-relaxed">
                   Whether you're looking for a passionate developer, want to
                   discuss a project, or simply want to connect, I'd love to hear
                   from you. As someone who values mentorship and communication,
@@ -107,14 +107,14 @@ const Contact = () => {
                           ? "noopener noreferrer"
                           : ""
                       }
-                      className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                      className="flex items-center space-x-4 p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition-colors group"
                     >
                       <span className="text-2xl">{info.icon}</span>
                       <div>
-                        <p className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                        <p className="font-semibold text-white group-hover:text-blue-400 transition-colors">
                           {info.label}
                         </p>
-                        <p className="text-gray-600 text-sm">{info.value}</p>
+                        <p className="text-gray-300 text-sm">{info.value}</p>
                       </div>
                     </a>
                   ))}
@@ -122,38 +122,38 @@ const Contact = () => {
               </div>
 
               {/* Quick Facts */}
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Quick Facts
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <span className="text-xl">🎓</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Senior at Snow College - Software Engineering
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-xl">💼</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Full-Stack Intern at Snow College IT
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-xl">🌎</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Originally from Guatemala
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-xl">🗣️</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Trilingual (Spanish, English, Learning German & Russian)
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-xl">🚀</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Passionate about Entrepreneurship
                     </span>
                   </div>
@@ -162,8 +162,8 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+            <div className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Send a Message
               </h3>
 
@@ -172,7 +172,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-gray-300 mb-2"
                     >
                       Your Name
                     </label>
@@ -183,7 +183,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-500 bg-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-400"
                       placeholder="John Doe"
                     />
                   </div>
@@ -191,7 +191,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-gray-300 mb-2"
                     >
                       Email Address
                     </label>
@@ -202,7 +202,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-500 bg-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-400"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -211,7 +211,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-300 mb-2"
                   >
                     Subject
                   </label>
@@ -222,7 +222,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-500 bg-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-400"
                     placeholder="Project Collaboration Opportunity"
                   />
                 </div>
@@ -230,7 +230,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-300 mb-2"
                   >
                     Message
                   </label>
@@ -241,7 +241,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-500 bg-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none placeholder-gray-400"
                     placeholder="Tell me about your project, opportunity, or just say hello!"
                   />
                 </div>

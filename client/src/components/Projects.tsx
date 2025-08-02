@@ -93,17 +93,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               My{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Projects
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               A showcase of my technical journey, from mobile apps to enterprise
               solutions
             </p>
@@ -113,32 +113,32 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+                className="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
               >
                 {/* Project Image/Icon */}
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center">
                   <span className="text-6xl">{project.image}</span>
                 </div>
 
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Tech Stack */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3">
+                    <h4 className="font-semibold text-white mb-3">
                       Tech Stack:
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-blue-600 text-blue-100 rounded-full text-sm font-medium"
                         >
                           {tech}
                         </span>
@@ -148,7 +148,7 @@ const Projects = () => {
 
                   {/* Highlights */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3">
+                    <h4 className="font-semibold text-white mb-3">
                       Key Features:
                     </h4>
                     <ul className="space-y-2">
@@ -158,7 +158,7 @@ const Projects = () => {
                           className="flex items-start space-x-2"
                         >
                           <svg
-                            className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
+                            className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -168,7 +168,7 @@ const Projects = () => {
                               clipRule="evenodd"
                             />
                           </svg>
-                          <span className="text-gray-600 text-sm">
+                          <span className="text-gray-300 text-sm">
                             {highlight}
                           </span>
                         </li>
@@ -180,7 +180,7 @@ const Projects = () => {
                   <div className="flex space-x-4">
                     <a
                       href={project.github}
-                      className="flex-1 bg-gray-800 text-white text-center py-3 px-4 rounded-lg hover:bg-gray-900 transition-colors font-medium"
+                      className="flex-1 bg-gray-700 text-white text-center py-3 px-4 rounded-lg hover:bg-gray-600 transition-colors font-medium border border-gray-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -199,7 +199,7 @@ const Projects = () => {
                     </a>
                     <a
                       href={project.liveDemo}
-                      className="flex-1 bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                      className="flex-1 bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-500 transition-colors font-medium"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -226,7 +226,7 @@ const Projects = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white border border-gray-600">
               <h3 className="text-2xl font-bold mb-4">
                 Interested in Collaborating?
               </h3>

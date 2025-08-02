@@ -1,27 +1,26 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Me
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               From Guatemala to Snow College, here's my journey in technology
               and beyond
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Story */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                  <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
                     <svg
                       className="w-4 h-4 text-white"
                       fill="currentColor"
@@ -37,7 +36,7 @@ const About = () => {
                   </span>
                   My Journey
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   Originally from Guatemala, I've embarked on an incredible
                   journey to Snow College where I'm now entering my senior year
                   in Software Engineering. This path has shaped my perspective
@@ -46,9 +45,9 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                  <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
                     <svg
                       className="w-4 h-4 text-white"
                       fill="currentColor"
@@ -64,7 +63,7 @@ const About = () => {
                   </span>
                   Professional Experience
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   As a full-stack intern at Snow College's IT department, I work
                   with cutting-edge technologies including Python, FastAPI,
                   React, and cloud infrastructure. My experience spans
@@ -75,40 +74,36 @@ const About = () => {
 
             {/* Right Column - Details */}
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Education & Growth
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-3 h-3 bg-purple-600 rounded-full mt-2"></div>
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">
-                        Snow College
-                      </h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-semibold text-white">Snow College</h4>
+                      <p className="text-gray-300">
                         Software Engineering • Senior Year
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-3 h-3 bg-blue-600 rounded-full mt-2"></div>
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">
+                      <h4 className="font-semibold text-white">
                         Technical Skills
                       </h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         Full-stack development, Cloud infrastructure
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-3 h-3 bg-green-600 rounded-full mt-2"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full mt-2"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">
-                        Leadership
-                      </h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-semibold text-white">Leadership</h4>
+                      <p className="text-gray-300">
                         Student organizations, Event management
                       </p>
                     </div>
@@ -116,60 +111,60 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Passions & Goals
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">🚀</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Entrepreneurship & Innovation
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">🌎</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       Cultural Bridge Building
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">💼</span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-300">
                       U.S. Career Development
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">🧠</span>
-                    <span className="text-gray-700">Continuous Learning</span>
+                    <span className="text-gray-300">Continuous Learning</span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Languages & Culture
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-2xl mb-2">🇬🇹</div>
-                    <p className="font-semibold text-gray-800">Spanish</p>
-                    <p className="text-sm text-gray-600">Native</p>
+                    <p className="font-semibold text-white">Spanish</p>
+                    <p className="text-sm text-gray-300">Native</p>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl mb-2">🇺🇸</div>
-                    <p className="font-semibold text-gray-800">English</p>
-                    <p className="text-sm text-gray-600">Fluent</p>
+                    <p className="font-semibold text-white">English</p>
+                    <p className="text-sm text-gray-300">Fluent</p>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl mb-2">🇩🇪</div>
-                    <p className="font-semibold text-gray-800">German</p>
-                    <p className="text-sm text-gray-600">Learning</p>
+                    <p className="font-semibold text-white">German</p>
+                    <p className="text-sm text-gray-300">Learning</p>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl mb-2">🇷🇺</div>
-                    <p className="font-semibold text-gray-800">Russian</p>
-                    <p className="text-sm text-gray-600">Learning</p>
+                    <p className="font-semibold text-white">Russian</p>
+                    <p className="text-sm text-gray-300">Learning</p>
                   </div>
                 </div>
               </div>
@@ -178,35 +173,33 @@ const About = () => {
 
           {/* Values Section */}
           <div className="mt-16 text-center">
-            <h3 className="text-3xl font-bold text-gray-800 mb-8">
-              Core Values
-            </h3>
+            <h3 className="text-3xl font-bold text-white mb-8">Core Values</h3>
             <div className="grid md:grid-cols-4 gap-6">
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl">
+              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
                 <div className="text-3xl mb-3">🤝</div>
-                <h4 className="font-bold text-gray-800 mb-2">Mentorship</h4>
-                <p className="text-gray-600 text-sm">
+                <h4 className="font-bold text-white mb-2">Mentorship</h4>
+                <p className="text-gray-300 text-sm">
                   Believing in the power of guidance and shared knowledge
                 </p>
               </div>
-              <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl">
+              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
                 <div className="text-3xl mb-3">💬</div>
-                <h4 className="font-bold text-gray-800 mb-2">Communication</h4>
-                <p className="text-gray-600 text-sm">
+                <h4 className="font-bold text-white mb-2">Communication</h4>
+                <p className="text-gray-300 text-sm">
                   Building bridges through clear and open dialogue
                 </p>
               </div>
-              <div className="p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl">
+              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
                 <div className="text-3xl mb-3">🌱</div>
-                <h4 className="font-bold text-gray-800 mb-2">Growth</h4>
-                <p className="text-gray-600 text-sm">
+                <h4 className="font-bold text-white mb-2">Growth</h4>
+                <p className="text-gray-300 text-sm">
                   Continuously evolving and embracing new challenges
                 </p>
               </div>
-              <div className="p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-xl">
+              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
                 <div className="text-3xl mb-3">🙏</div>
-                <h4 className="font-bold text-gray-800 mb-2">Faith</h4>
-                <p className="text-gray-600 text-sm">
+                <h4 className="font-bold text-white mb-2">Faith</h4>
+                <p className="text-gray-300 text-sm">
                   Grounded in Catholic values and open-minded perspective
                 </p>
               </div>
