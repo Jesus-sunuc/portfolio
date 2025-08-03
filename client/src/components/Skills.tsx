@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -89,10 +91,23 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-800">
+    <motion.section
+      id="skills"
+      className="py-20 bg-gray-800"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technical{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -103,14 +118,27 @@ const Skills = () => {
               A comprehensive overview of my technical expertise and
               professional capabilities
             </p>
-          </div>
+          </motion.div>
 
           {/* Skills Grid */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {skillCategories.map((category, categoryIndex) => (
-              <div
+              <motion.div
                 key={categoryIndex}
                 className="bg-gray-700 border border-gray-600 rounded-2xl p-8"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: categoryIndex * 0.2,
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)",
+                }}
+                viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
                   <span className="text-3xl mr-4">{category.icon}</span>
@@ -121,7 +149,16 @@ const Skills = () => {
 
                 <div className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
+                    <motion.div
+                      key={skillIndex}
+                      initial={{ x: -20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        delay: categoryIndex * 0.1 + skillIndex * 0.1,
+                        duration: 0.5,
+                      }}
+                      viewport={{ once: true }}
+                    >
                       <div className="flex justify-between items-center mb-2">
                         <span className="font-semibold text-white">
                           {skill.name}
@@ -131,28 +168,55 @@ const Skills = () => {
                         </span>
                       </div>
                       <div className="w-full bg-gray-600 rounded-full h-3">
-                        <div
-                          className={`h-3 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
+                        <motion.div
+                          className={`h-3 rounded-full bg-gradient-to-r ${skill.color}`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{
+                            delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5,
+                            duration: 1,
+                            ease: "easeOut",
+                          }}
+                          viewport={{ once: true }}
+                        ></motion.div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Achievements Section */}
-          <div className="mb-16">
+          <motion.div
+            className="mb-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               Experience & Achievements
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 p-6 rounded-xl text-center hover:shadow-lg transition-shadow"
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    delay: 0.8 + index * 0.1,
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -5,
+                    boxShadow: "0 10px 25px rgba(59, 130, 246, 0.15)",
+                  }}
+                  viewport={{ once: true }}
                 >
                   <div className="text-4xl mb-4">{achievement.icon}</div>
                   <h4 className="font-bold text-white mb-2">
@@ -164,13 +228,19 @@ const Skills = () => {
                   <span className="inline-block bg-blue-600 text-blue-100 px-3 py-1 rounded-full text-xs font-medium">
                     {achievement.period}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Certifications & Learning */}
-          <div className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8">
+          <motion.div
+            className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               Certifications & Continuous Learning
             </h3>
@@ -247,10 +317,12 @@ const Skills = () => {
 
             {/* Resume Download */}
             <div className="text-center mt-8">
-              <a
+              <motion.a
                 href="/resume.pdf"
                 download
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -266,12 +338,12 @@ const Skills = () => {
                   />
                 </svg>
                 Download Resume
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

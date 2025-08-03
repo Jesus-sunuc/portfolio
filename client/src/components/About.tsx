@@ -1,9 +1,24 @@
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-800">
+    <motion.section
+      id="about"
+      className="py-20 bg-gray-800"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               About{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -14,11 +29,18 @@ const About = () => {
               From Guatemala to Snow College, here's my journey in technology
               and beyond
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
                     <svg
@@ -43,9 +65,16 @@ const About = () => {
                   on technology's power to connect cultures and create
                   opportunities.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
                     <svg
@@ -69,12 +98,19 @@ const About = () => {
                   React, and cloud infrastructure. My experience spans
                   cybersecurity, student leadership, and event organization.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
             {/* Right Column - Details */}
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Education & Growth
                 </h3>
@@ -109,9 +145,16 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Passions & Goals
                 </h3>
@@ -139,9 +182,16 @@ const About = () => {
                     <span className="text-gray-300">Continuous Learning</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Languages & Culture
                 </h3>
@@ -167,7 +217,7 @@ const About = () => {
                     <p className="text-sm text-gray-300">Learning</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -207,7 +257,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

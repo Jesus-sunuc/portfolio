@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -65,10 +66,23 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
+    <motion.section
+      id="contact"
+      className="py-20 bg-gray-900"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Get In{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -80,12 +94,25 @@ const Contact = () => {
               projects, or just have a conversation about technology and
               innovation.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg">
+            <motion.div
+              className="space-y-8"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg"
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)",
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Let's Connect
                 </h3>
@@ -98,7 +125,7 @@ const Contact = () => {
 
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
-                    <a
+                    <motion.a
                       key={index}
                       href={info.link}
                       target={info.link.startsWith("http") ? "_blank" : "_self"}
@@ -108,6 +135,11 @@ const Contact = () => {
                           : ""
                       }
                       className="flex items-center space-x-4 p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition-colors group"
+                      initial={{ x: -20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
+                      whileHover={{ scale: 1.02, x: 5 }}
+                      viewport={{ once: true }}
                     >
                       <span className="text-2xl">{info.icon}</span>
                       <div>
@@ -116,53 +148,99 @@ const Contact = () => {
                         </p>
                         <p className="text-gray-300 text-sm">{info.value}</p>
                       </div>
-                    </a>
+                    </motion.a>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Quick Facts */}
-              <div className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8">
+              <motion.div
+                className="bg-gradient-to-br from-gray-700 to-gray-600 border border-gray-600 rounded-2xl p-8"
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)",
+                }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Quick Facts
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
+                  <motion.div
+                    className="flex items-center space-x-3"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.0, duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
                     <span className="text-xl">🎓</span>
                     <span className="text-gray-300">
                       Senior at Snow College - Software Engineering
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
+                  </motion.div>
+                  <motion.div
+                    className="flex items-center space-x-3"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.1, duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
                     <span className="text-xl">💼</span>
                     <span className="text-gray-300">
                       Full-Stack Intern at Snow College IT
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
+                  </motion.div>
+                  <motion.div
+                    className="flex items-center space-x-3"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.2, duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
                     <span className="text-xl">🌎</span>
                     <span className="text-gray-300">
                       Originally from Guatemala
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
+                  </motion.div>
+                  <motion.div
+                    className="flex items-center space-x-3"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.3, duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
                     <span className="text-xl">🗣️</span>
                     <span className="text-gray-300">
                       Trilingual (Spanish, English, Learning German & Russian)
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
+                  </motion.div>
+                  <motion.div
+                    className="flex items-center space-x-3"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.4, duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
                     <span className="text-xl">🚀</span>
                     <span className="text-gray-300">
                       Passionate about Entrepreneurship
                     </span>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Contact Form */}
-            <div className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg">
+            <motion.div
+              className="bg-gray-700 border border-gray-600 rounded-2xl p-8 shadow-lg"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-2xl font-bold text-white mb-6">
                 Send a Message
               </h3>
@@ -280,12 +358,22 @@ const Contact = () => {
                   )}
                 </button>
               </form>
-            </div>
+            </motion.div>
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <motion.div
+            className="text-center mt-16"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
               <h3 className="text-2xl font-bold mb-4">
                 Ready to Work Together?
               </h3>
@@ -295,26 +383,30 @@ const Contact = () => {
                 create something amazing together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <motion.a
                   href="mailto:jesus.sunuc@example.com"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Email Me Directly
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://calendly.com/jesussunuc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Schedule a Call
-                </a>
+                </motion.a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Projects = () => {
   const projects = [
     {
@@ -93,10 +95,23 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <motion.section
+      id="projects"
+      className="py-20 bg-gray-900"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               My{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -107,13 +122,27 @@ const Projects = () => {
               A showcase of my technical journey, from mobile apps to enterprise
               solutions
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: index * 0.2,
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  y: -10,
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.15)",
+                }}
+                viewport={{ once: true }}
               >
                 {/* Project Image/Icon */}
                 <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center">
@@ -220,13 +249,23 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white border border-gray-600">
+          <motion.div
+            className="text-center mt-16"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white border border-gray-600"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
               <h3 className="text-2xl font-bold mb-4">
                 Interested in Collaborating?
               </h3>
@@ -234,20 +273,22 @@ const Projects = () => {
                 I'm always excited to work on new projects and explore
                 innovative solutions. Let's create something amazing together!
               </p>
-              <button
+              <motion.button
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Get In Touch
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
