@@ -101,7 +101,6 @@ const About = () => {
               </motion.div>
             </div>
 
-            {/* Right Column - Details */}
             <div className="space-y-8">
               <motion.div
                 className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
@@ -147,7 +146,7 @@ const About = () => {
                 </div>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -182,9 +181,9 @@ const About = () => {
                     <span className="text-gray-300">Continuous Learning</span>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
-              <motion.div
+              {/* <motion.div
                 className="bg-gradient-to-br from-gray-700 to-gray-600 p-8 rounded-2xl border border-gray-600"
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -206,53 +205,8 @@ const About = () => {
                     <p className="font-semibold text-white">English</p>
                     <p className="text-sm text-gray-300">Fluent</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl mb-2">🇩🇪</div>
-                    <p className="font-semibold text-white">German</p>
-                    <p className="text-sm text-gray-300">Learning</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl mb-2">🇷🇺</div>
-                    <p className="font-semibold text-white">Russian</p>
-                    <p className="text-sm text-gray-300">Learning</p>
-                  </div>
                 </div>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* Values Section */}
-          <div className="mt-16 text-center">
-            <h3 className="text-3xl font-bold text-white mb-8">Core Values</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
-                <div className="text-3xl mb-3">🤝</div>
-                <h4 className="font-bold text-white mb-2">Mentorship</h4>
-                <p className="text-gray-300 text-sm">
-                  Believing in the power of guidance and shared knowledge
-                </p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
-                <div className="text-3xl mb-3">💬</div>
-                <h4 className="font-bold text-white mb-2">Communication</h4>
-                <p className="text-gray-300 text-sm">
-                  Building bridges through clear and open dialogue
-                </p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
-                <div className="text-3xl mb-3">🌱</div>
-                <h4 className="font-bold text-white mb-2">Growth</h4>
-                <p className="text-gray-300 text-sm">
-                  Continuously evolving and embracing new challenges
-                </p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-gray-600">
-                <div className="text-3xl mb-3">🙏</div>
-                <h4 className="font-bold text-white mb-2">Faith</h4>
-                <p className="text-gray-300 text-sm">
-                  Grounded in Catholic values and open-minded perspective
-                </p>
-              </div>
+              </motion.div> */}
             </div>
           </div>
         </div>

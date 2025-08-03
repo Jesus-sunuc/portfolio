@@ -31,7 +31,6 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20 relative overflow-hidden"
     >
-      {/* Animated background particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -66,16 +65,16 @@ const Hero = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className="w-48 h-48 mx-auto mb-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-gray-700"
+            className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl ring-4 ring-gray-700"
           >
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-6xl font-bold text-white"
-            >
-              JS
-            </motion.span>
+            <motion.img
+              src="/image.jpg"
+              alt="Jesús Sunuc"
+              initial={{ opacity: 0, scale: 1.2 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           <motion.h1
@@ -155,7 +154,6 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          {/* Enhanced Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

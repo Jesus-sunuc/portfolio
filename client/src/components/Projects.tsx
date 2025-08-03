@@ -8,7 +8,7 @@ const Projects = () => {
         "A React Native chore management app designed for roommates to easily track and manage household responsibilities. Features include task assignment, completion tracking, and fair distribution algorithms.",
       techStack: ["React Native", "TypeScript", "Expo", "Firebase Auth"],
       image: "🏠",
-      github: "#",
+      github: "https://github.com/Jesus-sunuc/DormDuty",
       liveDemo: "#",
       highlights: [
         "Cross-platform mobile application",
@@ -23,7 +23,7 @@ const Projects = () => {
         "A comprehensive business profile platform specifically designed for Guatemalan SMBs to establish their online presence and connect with customers in the digital marketplace.",
       techStack: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
       image: "🌐",
-      github: "#",
+      github: "https://github.com/Jesus-sunuc/conectaHub",
       liveDemo: "#",
       highlights: [
         "Localized for Guatemalan market",
@@ -48,48 +48,18 @@ const Projects = () => {
       ],
     },
     {
-      title: "IT Department Tools",
-      description:
-        "Internal tools and automation scripts developed during my internship at Snow College's IT department, focusing on system administration and workflow optimization.",
-      techStack: ["Python", "Docker", "Kubernetes", "Azure"],
-      image: "🔧",
-      github: "#",
-      liveDemo: "#",
-      highlights: [
-        "Automated deployment pipelines",
-        "Infrastructure monitoring",
-        "Security compliance tools",
-        "Performance optimization",
-      ],
-    },
-    {
       title: "Cybersecurity Projects",
       description:
         "Various cybersecurity initiatives including vulnerability assessments, security awareness tools, and incident response automation developed through coursework and practical experience.",
       techStack: ["Python", "Linux", "Security Tools", "Networking"],
       image: "🔒",
-      github: "#",
+      // github: "#",
       liveDemo: "#",
       highlights: [
         "Vulnerability scanning automation",
         "Security awareness training materials",
         "Network security monitoring",
         "Incident response procedures",
-      ],
-    },
-    {
-      title: "Event Management System",
-      description:
-        "A comprehensive platform for organizing and managing student events, developed through my leadership roles in student organizations at Snow College.",
-      techStack: ["React", "Node.js", "MongoDB", "Express"],
-      image: "📅",
-      github: "#",
-      liveDemo: "#",
-      highlights: [
-        "Event registration and ticketing",
-        "Attendee management system",
-        "Real-time event updates",
-        "Analytics and reporting",
       ],
     },
   ];
@@ -144,7 +114,6 @@ const Projects = () => {
                 }}
                 viewport={{ once: true }}
               >
-                {/* Project Image/Icon */}
                 <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center">
                   <span className="text-6xl">{project.image}</span>
                 </div>
@@ -158,7 +127,6 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Tech Stack */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-white mb-3">
                       Tech Stack:
@@ -175,7 +143,6 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Highlights */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-white mb-3">
                       Key Features:
@@ -205,7 +172,6 @@ const Projects = () => {
                     </ul>
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex space-x-4">
                     <a
                       href={project.github}
@@ -245,7 +211,7 @@ const Projects = () => {
                           d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                         />
                       </svg>
-                      Live Demo
+                      View Project
                     </a>
                   </div>
                 </div>
@@ -253,8 +219,7 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Call to Action */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-16"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -285,7 +250,7 @@ const Projects = () => {
                 Get In Touch
               </motion.button>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </motion.section>
