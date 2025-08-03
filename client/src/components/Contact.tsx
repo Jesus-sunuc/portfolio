@@ -24,7 +24,7 @@ const Contact = () => {
         </svg>
       ),
       label: "LinkedIn",
-      value: "linkedin/jesús-st6/",
+      value: "linkedin/jesús-st6",
       link: "https://www.linkedin.com/in/jesús-st6/",
     },
     {

@@ -65,8 +65,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                <span className="text-xl font-bold text-white">JS</span>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-3 ring-2 ring-gray-700">
+                <img
+                  src="/image.jpg"
+                  alt="Jesús Sunuc"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-2xl font-bold">Jesús Sunuc</h3>
             </div>

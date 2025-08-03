@@ -7,7 +7,7 @@ const Projects = () => {
       description:
         "A React Native chore management app designed for roommates to easily track and manage household responsibilities. Features include task assignment, completion tracking, and fair distribution algorithms.",
       techStack: ["React Native", "TypeScript", "Expo", "Firebase Auth"],
-      image: "🏠",
+      image: "/DormDuty.png",
       github: "https://github.com/Jesus-sunuc/DormDuty",
       liveDemo: "#",
       highlights: [
@@ -22,7 +22,7 @@ const Projects = () => {
       description:
         "A comprehensive business profile platform specifically designed for Guatemalan SMBs to establish their online presence and connect with customers in the digital marketplace.",
       techStack: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
-      image: "🌐",
+      image: "/ConectaHub.png",
       github: "https://github.com/Jesus-sunuc/conectaHub",
       liveDemo: "#",
       highlights: [
@@ -115,7 +115,15 @@ const Projects = () => {
                 viewport={{ once: true }}
               >
                 <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center">
-                  <span className="text-6xl">{project.image}</span>
+                  {project.image.startsWith("/") ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-75 object-cover"
+                    />
+                  ) : (
+                    <span className="text-6xl">{project.image}</span>
+                  )}
                 </div>
 
                 <div className="p-8">
