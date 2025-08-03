@@ -148,7 +148,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("projects")}
-              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View My Projects
             </motion.button>
