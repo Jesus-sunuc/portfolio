@@ -19,41 +19,39 @@ const Header = () => {
             <span className="text-blue-400">J</span>esús
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               Contact
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-300 hover:text-blue-400"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -83,7 +81,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-800">
             <div className="flex flex-col space-y-4 pt-4">
